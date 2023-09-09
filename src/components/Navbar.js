@@ -43,6 +43,16 @@ function Navbar() {
               Modal
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/contact" onClick={closeMobileMenu}>
+              Contact
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/about" onClick={closeMobileMenu}>
+              About Us
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

@@ -13,19 +13,37 @@ function Accordion() {
     }
   };
 
-  // Define accordion items
+  // Define accordion items with contact information
   const accordionItems = [
     {
-      title: 'Accordion Item 1',
-      content: 'Content for Accordion Item 1',
+      title: 'General Inquiries',
+      content: (
+        <div>
+          <p>Email: contact@example.com</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Address: 123 Main St, City, Country</p>
+        </div>
+      ),
     },
     {
-      title: 'Accordion Item 2',
-      content: 'Content for Accordion Item 2',
+      title: 'Sales Department',
+      content: (
+        <div>
+          <p>Email: sales@example.com</p>
+          <p>Phone: (123) 456-1234</p>
+          <p>Address: 456 Sales St, City, Country</p>
+        </div>
+      ),
     },
     {
-      title: 'Accordion Item 3',
-      content: 'Content for Accordion Item 3',
+      title: 'Support Team',
+      content: (
+        <div>
+          <p>Email: support@example.com</p>
+          <p>Phone: (123) 456-5678</p>
+          <p>Address: 789 Support St, City, Country</p>
+        </div>
+      ),
     },
   ];
 

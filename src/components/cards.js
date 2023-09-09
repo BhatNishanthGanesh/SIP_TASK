@@ -29,7 +29,7 @@ function Card() {
 // CardList Component
 function CardList() {
   // Create an array to represent the number of cards you want
-  const numberOfCards = 3;
+  const numberOfCards = 4;
 
   // Use a loop to render multiple cards
   const cards = Array.from(Array(numberOfCards), (e, i) => (
