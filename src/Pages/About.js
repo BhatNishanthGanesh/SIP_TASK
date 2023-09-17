@@ -73,7 +73,7 @@ function About() {
             <div className="col-md-6">
               <div className="card">
                 <div className="card-body">
-                  <h2 className="card-title">Selected Content</h2>
+                  <h2 className="card-title">Selected Content.</h2>
                   <p className="card-text">{selectedContent}</p>
                 </div>
               </div>
