@@ -3,13 +3,9 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Function to toggle the mobile menu
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
-
-  // Function to close the mobile menu when a link is clicked
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
   };
@@ -17,7 +13,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-success p-2">
       <Link className="navbar-brand" to="/" onClick={closeMobileMenu}>
-        GoFood
+        HOME
       </Link>
       <button
         className={`navbar-toggler ${isMobileMenuOpen ? '' : 'collapsed'}`}

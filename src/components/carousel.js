@@ -12,13 +12,13 @@ function carousel() {
             </form>
           </div>
           <div className="carousel-item active">
-            <img className="d-block w-100" src="https://source.unsplash.com/random/300×300/?pizza" alt="First slide" style={{filter:"brightness(50%)"}} />
+            <img className="d-block w-100" src="https://source.unsplash.com/random/300×300/?books" alt="First slide" style={{filter:"brightness(50%)"}} />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src="https://source.unsplash.com/random/300×300/?burger" alt="Second slide" style={{filter:"brightness(50%)"}} />
+            <img className="d-block w-100" src="https://source.unsplash.com/random/300×300/?pen" alt="Second slide" style={{filter:"brightness(50%)"}} />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src="https://source.unsplash.com/random/300×300/?momos" alt="Third slide" style={{filter:"brightness(50%)"}}/>
+            <img className="d-block w-100" src="https://source.unsplash.com/random/300×300/?shop" alt="Third slide" style={{filter:"brightness(50%)"}}/>
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">

@@ -14,4 +14,20 @@ body {
      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace; 
   } */
-  
+  /* Card.css */
+
+.card-container:hover .card-flipper {
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
+}
+
+
+.card-front {
+  backface-visibility: hidden;
+}
+
+
+.card-back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}

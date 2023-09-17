@@ -16,12 +16,15 @@ function Home() {
         <Carousel />
       </div>
       <div>
+        <h4 className='m-3'>Cards Section</h4>
         <CardList />
       </div>
       <div>
+        <h4 className='m-3'>Accordin Section</h4>
         <Accordion />
       </div>
       <div>
+        <h4 className='m-3'>Collection of buttons</h4>
         <Btn />
       </div>
       
