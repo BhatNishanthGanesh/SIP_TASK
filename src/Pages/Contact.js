@@ -1,5 +1,4 @@
 import React from 'react';
-import Accordion from '../components/accordoin'
 import Navbar from '../components/Navbar';
 
 function Contact() {
@@ -26,9 +25,6 @@ function Contact() {
                 <strong>Address:</strong> 123 Main St, City, Country
               </li>
             </ul>
-          </div>
-          <div className="col-md-6">
-            <Accordion /> {/* Assuming you have a component named Accordion */}
           </div>
         </div>
       </div>

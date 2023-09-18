@@ -3,14 +3,13 @@ import Navbar from '../components/Navbar';
 
 function CustomPage() {
   const [formData, setFormData] = useState({
-    // Define your form fields and their initial values here
     name: '',
     email: '',
-    // Add more fields as needed
   });
 
   const [showFormModal, setShowFormModal] = useState(false);
-
+  const [submittedData, setSubmittedData] = useState([]);
+  
   const handleShowFormModal = () => {
     setShowFormModal(true);
   };
@@ -29,12 +28,10 @@ function CustomPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here, e.g., send data to an API
-    // Reset the form and close the modal afterward
+    setSubmittedData([...submittedData, formData]);
     setFormData({
       name: '',
       email: '',
-      // Reset other fields as needed
     });
     setShowFormModal(false);
   };
@@ -44,11 +41,10 @@ function CustomPage() {
       <Navbar />
       <div className="container">
         <h1>Custom Page</h1>
-        <button className="btn btn-primary" onClick={handleShowFormModal}>
+        <button className="btn btn-primary m-3" onClick={handleShowFormModal}>
           Open Modal
         </button>
 
-        {/* Modal */}
         <div className={`modal ${showFormModal ? 'show' : ''}`} tabIndex="-1" role="dialog" style={{ display: showFormModal ? 'block' : 'none' }}>
           <div className="modal-dialog" role="document">
             <div className="modal-content">
@@ -68,7 +64,6 @@ function CustomPage() {
                     <label htmlFor="email">Email:</label>
                     <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleInputChange} required />
                   </div>
-                  {/* Add more form fields here */}
                   <button type="submit" className="btn btn-primary">
                     Submit
                   </button>
@@ -81,6 +76,19 @@ function CustomPage() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="row">
+          {submittedData.map((data, index) => (
+            <div key={index} className="col-lg-4 col-md-6 mb-4">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Entered Data</h5>
+                  <p className="card-text">Name: {data.name}</p>
+                  <p className="card-text">Email: {data.email}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

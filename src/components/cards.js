@@ -27,7 +27,7 @@ function Card({ imageIndex }) {
   return (
     <div>
       <div className="card m-3" style={{ "maxWidth": "18rem" }}>
-        <img className="card-img-top" height={200} src={imageUrls[imageIndex]} alt="Card image cap" />
+        <img className="card-img-top" height={200} src={imageUrls[imageIndex]} alt="Error" />
         <div className="card-body">
           <h5 className="card-title">{cardTitles[imageIndex]}</h5>
           <p className="card-text">{cardTexts[imageIndex]}</p>

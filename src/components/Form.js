@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import Navbar from "./Navbar";
 
-function MyForm() {
+const Forms = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
+  // Update the handleChange function to set the form data correctly
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,48 +20,74 @@ function MyForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission, e.g., send data to the server
+    // Add your logic here to handle the form submission, e.g., sending an email or saving to a database
+    console.log(formData);
+    // Clear the form data after submission
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          className="form-control"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          className="form-control"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="message">Message</label>
-        <textarea
-          className="form-control"
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-        />
-      </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
-    </form>
-  );
-}
+    <>
+      <Navbar />
+        <Container>
+          <Row>
+            <Col md={{ span: 6, offset: 3 }}>
+              <h2>Contact Us</h2>
+              <Form onSubmit={handleSubmit}>
+                <Form.Group controlId="name">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
 
-export default MyForm;
+                <Form.Group controlId="email">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="message">
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={5}
+                    name="message"
+                    placeholder="Enter your message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    style={{
+                      maxHeight: "200px", // Set maximum height
+                      resize: "vertical", // Allow vertical resizing
+                    }}
+                    required
+                  />
+                </Form.Group>
+
+                <Button className="m-2 primary" type="submit">
+                  Submit
+                </Button>
+              </Form>
+            </Col>
+          </Row>
+        </Container>
+    </>
+  );
+};
+
+export default Forms;
