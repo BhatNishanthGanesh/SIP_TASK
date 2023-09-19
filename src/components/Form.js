@@ -20,9 +20,7 @@ const Forms = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your logic here to handle the form submission, e.g., sending an email or saving to a database
     console.log(formData);
-    // Clear the form data after submission
     setFormData({
       name: "",
       email: "",
